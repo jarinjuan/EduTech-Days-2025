@@ -1,345 +1,409 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>EduTech Day 2025</title>
-  <meta name="description" content="Stručný popis stránky (cca 150 znaků).">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>EduTech Day 2025</title>
+ <meta name="description" content="Stručný popis stránky (cca 150 znaků).">
+ <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
 
-   <meta property="og:title" content="EduTech Day 2025">
-   <meta property="og:description" content="Jednodenní konference o technologiích a vzdělávání – inspirace a inovace v praxi.">
-   <meta property="og:image" content="https://example.com/og-image.jpg">
-   <meta property="og:url" content="https://example.com/">
-   <meta property="og:type" content="website">
+ <meta property="og:title" content="EduTech Day 2025">
+ <meta property="og:description" content="Jednodenní konference o technologiích a vzdělávání – inspirace a inovace v praxi.">
+ <meta property="og:image" content="https://example.com/og-image.jpg">
+ <meta property="og:url" content="https://example.com/">
+ <meta property="og:type" content="website">
 
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="EduTech Day 2025">
-   <meta name="twitter:description" content="Jednodenní konference o technologiích a vzdělávání – inspirace a inovace v praxi.">
-   <meta name="twitter:image" content="https://example.com/og-image.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="EduTech Day 2025">
+ <meta name="twitter:description" content="Jednodenní konference o technologiích a vzdělávání – inspirace a inovace v praxi.">
+ <meta name="twitter:image" content="https://example.com/og-image.jpg">
 
-   <style>
-    * { margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
+ <style>
+ * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+ }
+
+ body {
+ font-family: "Noto Sans Mono", monospace;
+ background: #404349;
+ color: white;
+ padding-top: 60px;
+ }
+
+ header {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ background: rgba(255,255,255,0.1);
+ backdrop-filter: blur(10px);
+ z-index: 80;
+ padding: 10px;
+ }
+
+ nav {
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+ flex-wrap: wrap;
+ }
+
+ nav a {
+ color: white;
+ text-decoration: none;
+ padding: 8px 12px;
+ border-radius: 5px;
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ }
+
+ nav a:hover { 
+    background: rgba(255,255,255,0.2); 
+}
+
+ #btt {
+ position: fixed;
+ bottom: 15px;
+ right: 15px;
+ background: rgba(255,255,255,0.15);
+ color: white;
+ padding: 10px;
+ border-radius: 50%;
+ text-decoration: none;
+ width: 80px;
+ height: 80px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ main { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 15px; 
+}
+
+ h1 { 
+    text-align: center; 
+    font-size: 2.2em; 
+    margin-bottom: 15px; 
     }
 
-    body {
-      font-family: "Noto Sans Mono", monospace;
-      background: #404349;
-      color: white;
-      padding-top: 60px;
-    }
+ h2 { 
+    font-size: 1.6em; 
+    margin: 25px 0 10px 0; 
+    border-bottom: 1px solid rgba(255,255,255,0.3); 
+    padding-bottom: 3px; 
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      z-index: 80;
-      padding: 10px;
-    }
+ .speakers {
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+ flex-wrap: wrap;
+ margin: 15px 0;
+ }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+ .speakers article {
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 10px;
+ padding: 15px;
+ text-align: center;
+ width: 220px;
+ }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+ .speakers img {
+ width: 150px;
+ height: 150px;
+ object-fit: cover;
+ border-radius: 8px;
+ margin-bottom: 8px;
+ }
 
-    nav a:hover { background: rgba(255,255,255,0.2); }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 8px;
+ margin: 15px 0;
+ }
 
-    #btt {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(255,255,255,0.15);
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      text-decoration: none;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+th, td { padding: 10px; 
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-    main { max-width: 1000px; margin: 0 auto; padding: 15px; }
-    h1 { text-align: center; font-size: 2.2em; margin-bottom: 15px; }
-    h2 { font-size: 1.6em; margin: 25px 0 10px 0; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 3px; }
+th { background: rgba(255,255,255,0.1); 
+      font-weight: bold; 
+}
 
-    .speakers {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin: 15px 0;
-    }
+ .map-form {
+ display: flex;
+ gap: 15px;
+ flex-wrap: wrap;
+ justify-content: center;
+ margin: 15px 0;
+ }
 
-    .speakers article {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      width: 220px;
-    }
+ .map-container, form {
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 10px;
+ padding: 15px;
+ flex: 1;
+ max-width: 400px;
+ }
 
-    .speakers img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 8px;
-    }
+ fieldset { 
+    border: none;
+ }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      margin: 15px 0;
-    }
+ legend { 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
 
-    th, td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    th { background: rgba(255,255,255,0.1); font-weight: bold; }
+ label { 
+    display: block; 
+    margin: 8px 0 3px 0; 
+}
 
-    .map-form {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 15px 0;
-    }
+ input[type="text"], input[type="email"], input[type="tel"] {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid rgba(255,255,255,0.3);
+ border-radius: 4px;
+ background: rgba(255,255,255,0.1);
+ color: white;
+ }
 
-    .map-container, form {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 10px;
-      padding: 15px;
-      flex: 1;
-      max-width: 400px;
-    }
+ input[type="submit"] {
+ background: rgba(255,255,255,0.2);
+ color: white;
+ border: 1px solid rgba(255,255,255,0.3);
+ padding: 8px 15px;
+ border-radius: 4px;
+ cursor: pointer;
+ margin-top: 10px;
+ }
 
-    fieldset { border: none; }
-    legend { font-weight: bold; margin-bottom: 10px; }
-    label { display: block; margin: 8px 0 3px 0; }
+ details {
+ background: rgba(255,255,255,0.1);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 8px;
+ margin: 8px 0;
+ padding: 12px;
+ }
 
-    input[type="text"], input[type="email"], input[type="tel"] {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 4px;
-      background: rgba(255,255,255,0.1);
-      color: white;
-    }
+ footer {
+ text-align: center;
+ padding: 20px;
+ background: rgba(0,0,0,0.3);
+ margin-top: 30px;
+ }
 
-    input::placeholder { color: rgba(255,255,255,0.6); }
+iframe { border-radius: 8px; 
+    width: 100%; 
+}
 
-    input[type="submit"] {
-      background: rgba(255,255,255,0.2);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 8px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+ @media (max-width: 768px) {
+ body { padding-top: 120px; }
+ nav { gap: 8px; flex-direction: column; }
+ nav a { text-align: center; }
+ main { padding: 10px; }
+ h1 { font-size: 1.8em; }
+ h2 { font-size: 1.4em; }
+ .speakers article { width: 100%; max-width: 250px; }
+ .map-form { flex-direction: column; }
+ .map-container, form { max-width: 100%; }
+ th, td { padding: 6px; 
+    font-size: 0.9em; 
+}
+ }
 
-    details {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      margin: 8px 0;
-      padding: 12px;
-    }
+ @media (max-width: 480px) {
+ body { padding-top: 140px; }
+ h1 { font-size: 1.6em; }
+ .speakers img { width: 120px; 
+    height: 120px; 
+ }
+ th, td { padding: 4px; 
+    font-size: 0.8em; 
+}
+ }
 
-    summary { cursor: pointer; font-weight: bold; }
-    details img { max-width: 100%; border-radius: 5px; margin-top: 8px; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.3);
-      margin-top: 30px;
-    }
-
-    iframe { border-radius: 8px; width: 100%; }
-    address { margin-top: 8px; font-style: normal; text-align: center; }
-
-    @media (max-width: 768px) {
-      body { padding-top: 120px; }
-      nav { gap: 8px; flex-direction: column; }
-      nav a { text-align: center; }
-      main { padding: 10px; }
-      h1 { font-size: 1.8em; }
-      h2 { font-size: 1.4em; }
-      .speakers article { width: 100%; max-width: 250px; }
-      .map-form { flex-direction: column; }
-      .map-container, form { max-width: 100%; }
-      th, td { padding: 6px; font-size: 0.9em; }
-    }
-
-    @media (max-width: 480px) {
-      body { padding-top: 140px; }
-      h1 { font-size: 1.6em; }
-      .speakers img { width: 120px; height: 120px; }
-      th, td { padding: 4px; font-size: 0.8em; }
-    }
-
-    @media (max-width: 320px) {
-      body { padding-top: 160px; }
-      main { padding: 8px; }
-      h1 { font-size: 1.4em; }
-      h2 { font-size: 1.2em; }
-      .speakers img { width: 100px; height: 100px; }
-      .speakers article { padding: 10px; }
-    }
-   </style>
-
-   </style>
+ @media (max-width: 320px) {
+ body { padding-top: 160px; }
+ main { padding: 8px; }
+ h1 { font-size: 1.4em; }
+ h2 { font-size: 1.2em; }
+ .speakers img { width: 100px; 
+    height: 100px; 
+ }
+ .speakers article { padding: 10px; }
+ }
+ </style>
 
 </head>
 <body>
-  <header>
-    <nav aria-label="Hlavní navigace">
-      <a href="#program">Program akce</a>
-      <a href="#speakers">Speakeři</a>
-      <a href="#venuetickets">Lístky a místo konání</a>
-    </nav>
-  </header>
+ <header>
+ <nav aria-label="Hlavní navigace">
+ <a href="#program">Program akce</a>
+ <a href="#speakers">Speakeři</a>
+ <a href="#venuetickets">Lístky a místo konání</a>
+ </nav>
+ </header>
 
-  <a href="#main" id="btt" aria-label="Zpět nahoru">
-    <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-      <path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/>
-    </svg>
-  </a>
+ <a href="#main" id="btt" aria-label="Zpět nahoru">
+ <svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+ <path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z"/>
+ </svg>
+ </a>
+
+ <main id="main">
+ <section>
+ <h1>EduTech Day 2025</h1>
+ <p>Inovace, technologie, inspirace.</p>
+ <p>Datum konání: <time datetime="2025-03-15">13. října 2025</time></p>
+ </section>
+
+ <section id="program">
+ <h2>Program akce</h2>
+ <table>
+ <thead>
+ <tr>
+ <th scope="col">Segment</th>
+ <th scope="col">Doba konání</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Seminář metodik učení</td>
+ <td><time datetime="10:00">10:00</time> - <time datetime="11:00">11:00</time></td>
+ </tr>
+ <tr>
+ <td>Seminář <cite>Metra Páry</cite></td>
+ <td><time datetime="11:30">11:30</time> - <time datetime="13:00">13:00</time></td>
+ </tr>
+ <tr>
+ <td>Workshop: AI ve výuce</td>
+ <td><time datetime="13:15">13:15</time> - <time datetime="14:00">14:00</time></td>
+ </tr>
+ <tr>
+ <td>Přednáška o budoucnosti vzdělávání</td>
+ <td><time datetime="14:10">14:10</time> - <time datetime="14:45">14:45</time></td>
+ </tr>
+ <tr>
+ <td>Workshop: Gamifikace vzdělání</td>
+ <td><time datetime="15:00">15:00</time> - <time datetime="16:00">16:00</time></td>
+ </tr>
+ </tbody>
+ </table>
+ </section>
+
+ <section id="speakers">
+ <h2>Speakeři</h2>
+ <div class="speakers">
+ <article>
+ <figure>
+ <img src="https://yt3.googleusercontent.com/Nma7R7np_tbNw11xywygKd9AW0TJKSHbEsQNoVwGk1g1uwhsuZF5OKaZcsbREi3dVpFqFcZm=s900-c-k-c0x00ffffff-no-rj" alt="Portrét Petra Máry">
+ <figcaption>Petr Mára</figcaption>
+ </figure>
+ <p>Expert na technologie a vzdělávací metodiky</p>
+ </article>
+
+ <article>
+ <figure>
+ <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Portrét Linuse Torvaldse">
+ <figcaption>Linus Torvalds</figcaption>
+ </figure>
+ <p>Tvůrce operačního systému Linux</p>
+ </article>
+
+ <article>
+ <figure>
+ <img src="https://i.pinimg.com/474x/a7/fc/53/a7fc53d83a6025438f96067f1fac7664.jpg" alt="Portrét Marka Zuckerberga">
+ <figcaption>Mark Zuckerberg</figcaption>
+ </figure>
+ <p>Zakladatel a CEO Meta (Facebook)</p>
+ </article>
+ </div>
+ </section>
+
+ <section id="venuetickets">
+ <h2>Místo konání &amp; vstupenky</h2>
+ <div class="map-form">
+ <div class="map-container">
+ <iframe width="100%" height="400"
+ src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=cs&amp;q=48.7718361%2018.6234916%20+(EduTech%20Day%202025)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+ title="Mapa místa konání EduTech Day 2025">
+ </iframe>
+ <address>
+ Námestie slobody 811 06<br>
+ Bratislava, Slovensko
+ </address>
+ </div>
+
+ <form action="/submit" method="post">
+ <fieldset>
+ <legend>Registrace na EduTech Day 2025</legend>
+
+ <label for="name">Jméno:</label>
+ <input type="text" id="name" name="name" placeholder="Petr Mára" required>
+
+ <label for="email">E-mail:</label>
+ <input type="email" id="email" name="email" placeholder="petr@example.com" required>
+
+ <label for="phone">Telefon:</label>
+ <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789"
+ pattern="^\+420\s\d{3}\s\d{3}\s\d{3}$"
+ aria-describedby="phoneHelp" required>
+ <small id="phoneHelp">Formát: +420 123 456 789</small>
+
+ <input type="submit" value="Registrovat se">
+ </fieldset>
+
+ <noscript>
+ <p>Formulář funguje i bez JavaScriptu, ale některé funkce nemusí být aktivní.</p>
+ </noscript>
+ </form>
+ </div>
+ </section>
 
 
-  <main id="main">
-    <section>
-      <h1>EduTech Day 2025</h1>
-      <p>Inovace, technologie, inspirace.</p>
-      <p>Datum konání: <time datetime="2025-03-15">13. října 2025</time></p>
-    </section>
+ <section>
+ <h2>FAQ</h2>
+ <details>
+ <summary>Jak se mohu registrovat na konferenci?</summary>
+ <p>Registrace probíhá přes náš online formulář na této stránce v sekci "Místo konání &amp; vstupenky".</p>
+ </details>
 
-    <section id="program">
-      <h2>Program akce</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Segment</th>
-            <th scope="col">Doba konání</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Seminář metodik učení</td>
-            <td><time datetime="10:00">10:00</time> - <time datetime="11:00">11:00</time></td>
-          </tr>
-          <tr>
-            <td>Seminář <cite>Metra Páry</cite></td>
-            <td><time datetime="11:30">11:30</time> - <time datetime="13:00">13:00</time></td>
-          </tr>
-          <tr>
-            <td>Workshop: AI ve výuce</td>
-            <td><time datetime="13:15">13:15</time> - <time datetime="14:00">14:00</time></td>
-          </tr>
-          <tr>
-            <td>Přednáška o budoucnosti vzdělávání</td>
-            <td><time datetime="14:10">14:10</time> - <time datetime="14:45">14:45</time></td>
-          </tr>
-          <tr>
-            <td>Workshop: Gamifikace vzdělání</td>
-            <td><time datetime="15:00">15:00</time> - <time datetime="16:00">16:00</time></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+ <details>
+ <summary>Mohu vstoupit s jídlem a pitím?</summary>
+ <p>Do sálu se nesmí vstoupit s jídlem, ale občerstvení je k dispozici v přilehlé kavárně.</p>
+ </details>
 
+ <details>
+ <summary>Jak je to s bezpečností na Slovensku?</summary>
+ <img src="https://i.ytimg.com/vi/i9WpYaVdiz0/oardefault.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLBwYCEn7ZKDvvwuImzOHxcKUiSr3w"
+ alt="Informační video o bezpečnosti na Slovensku" width="480" height="360">
+ </details>
 
+ <details>
+ <summary>Jaké jsou možnosti dopravy?</summary>
+ <p>Místo konání je dostupné MHD, autem i pěšky.</p>
+ </details>
+ </section>
+ </main>
 
-    <section id="speakers">
-      <h2>Speakeři</h2>
-      <div class="speakers">
-        <article>
-          <figure>
-            <img src="https://yt3.googleusercontent.com/Nma7R7np_tbNw11xywygKd9AW0TJKSHbEsQNoVwGk1g1uwhsuZF5OKaZcsbREi3dVpFqFcZm=s900-c-k-c0x00ffffff-no-rj" alt="Portrét Petra Máry">
-            <figcaption>Petr Mára</figcaption>
-          </figure>
-          <p>Expert na technologie a vzdělávací metodiky</p>
-        </article>
-
-        <article>
-          <figure>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Portrét Linuse Torvaldse">
-            <figcaption>Linus Torvalds</figcaption>
-          </figure>
-          <p>Tvůrce operačního systému Linux</p>
-        </article>
-
-        <article>
-          <figure>
-            <img src="https://i.pinimg.com/474x/a7/fc/53/a7fc53d83a6025438f96067f1fac7664.jpg" alt="Portrét Marka Zuckerberga">
-            <figcaption>Mark Zuckerberg</figcaption>
-          </figure>
-          <p>Zakladatel a <abbr title="Chief Executive Officer">CEO</abbr> Meta (Facebook)</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="venuetickets">
-      <h2>Místo konání &amp; vstupenky</h2>
-      <div class="map-form">
-        <div class="map-container">
-          <iframe width="100%" height="400"
-                  src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=cs&amp;q=48.7718361%2018.6234916%20+(EduTech%20Day%202025)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  title="Mapa místa konání EduTech Day 2025">
-          </iframe>
-          <address>
-            Námestie slobody 811 06<br>
-            Bratislava, Slovensko
-          </address>
-        </div>
-
-        <form action="/submit" method="post">
-          <fieldset>
-            <legend>Registrace na EduTech Day 2025</legend>
-
-            <label for="name">Jméno:</label>
-            <input type="text" id="name" name="name" placeholder="Petr Mára" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="petr@example.com" required>
-
-            <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789"
-                   pattern="^\+420\s\d{3}\s\d{3}\s\d{3}$"
-                   aria-describedby="phoneHelp" required>
-            <small id="phoneHelp">Formát: +420 123 456 789</small>
-
-            <input type="submit" value="Registrovat se">
-          </fieldset>
-
-          <noscript>
-            <p>Formulář funguje i bez JavaScriptu, ale některé funkce nemusí být aktivní.</p>
-          </noscript>
-        </form>
-      </div>
-    
+ <footer>
+ <p>&copy; 2025 EduTech Day. Všechna práva vyhrazena.</p>
+ </footer>
+</body>
+</html>
